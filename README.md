@@ -8,8 +8,7 @@ cd Thinley_AMR_Dashboard/
 
 ```
 ## Once inside your working directory, you can activate kiro-cli and ask it to plan for you
-
-# kiro-cli keeps on asking for your approval every now and then, which is time consuming and distracting. You can bypass this using. And also kiro asks where you want to index it. So, i am setting it up so that it indexes in the complete working directory
+kiro-cli keeps on asking for your approval every now and then, which is time consuming and distracting. You can bypass this using. And also kiro asks where you want to index it. So, i am setting it up so that it indexes in the complete working directory
 ```
 mkdir -p .kiro/agents && cat > .kiro/agents/default.json << 'EOF'
   {"allowedTools": ["@builtin"],
