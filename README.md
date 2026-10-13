@@ -101,3 +101,7 @@ Keep the skill practical and reusable, and make it consistent with
 .kiro/steering/project-rules.md.
 
 ```
+
+```
+https://d35s4k4jxwn5xz.cloudfront.net/app/index.html
+```
