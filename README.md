@@ -61,3 +61,43 @@ Never place AWS credentials or other secrets in source code.
 
 
 ```
+
+# Now turn it into a skill. Give the following prompts into the kiro-cli
+
+```
+Please turn the steps you just used to build my AMR surveillance
+dashboard into a reusable Kiro skill.
+
+Save it as .kiro/skills/amr-surveillance-dashboard/SKILL.md.
+
+Start the file with this YAML front matter:
+---
+name: amr-surveillance-dashboard
+description: Use when building or updating an AMR surveillance dashboard to explore resistance genes by species, sequence type, collection year and location, with trends, maps and gene combinations.
+---
+
+Document the workflow you actually followed, including:
+- Preparing and validating isolate metadata and resistance gene data.
+- Creating filters for species, sequence type, year, location and gene.
+- Building summary cards, temporal charts and geographic maps.
+- Displaying exact gene combinations using an UpSet plot.
+- Adding a searchable isolate table and filtered CSV export.
+- Connecting filters consistently across all dashboard components.
+- Checking calculations, accessibility and responsive layout.
+
+Include these analysis requirements:
+- Count unique isolates, not gene records.
+- Treat sequence types as species-specific.
+- Display numerators and denominators for gene prevalence.
+- Do not treat missing gene results as gene absence.
+- Distinguish gene detection from phenotypic resistance.
+- Clearly label simulated data.
+- Do not infer transmission from shared resistance genes alone.
+
+Record the project's actual tools, dependencies and verification
+commands. Clearly distinguish completed steps from planned features.
+
+Keep the skill practical and reusable, and make it consistent with
+.kiro/steering/project-rules.md.
+
+```
