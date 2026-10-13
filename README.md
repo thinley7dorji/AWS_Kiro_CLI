@@ -25,5 +25,39 @@ EOF
 kiro-cli chat --trust-all-tools
 
 ```
-Project	What you would build	Difficulty
-1. AMR surveillance dashboard	Explore resistance genes by species, sequence type, year and location; display trends, maps and gene combinations
+
+```
+/plan
+```
+Lets say my project is to build a AMR surveillance dashboard to	Explore resistance genes by species, sequence type, year and location; display trends, maps and gene combinations. Ask kiro-cli to do the following
+
+```
+Please create a Kiro steering file for this project at .kiro/steering/project-rules.md.
+Start the file with front matter that sets inclusion to always.
+Add these rules:
+
+## Data
+Use simulated data for initial development and label it clearly.
+Use one unique isolate ID to link sample metadata and resistance genes.
+Support multiple resistance genes per isolate.
+Include species, sequence type, collection date, country, region, sampling location and resistance gene.
+Treat sequence types as species-specific: ST2 in one species is different from ST2 in another species.
+Preserve unknown values and display them as "Unknown".
+Show summary cards for isolate count, species count and gene count.
+Show yearly isolate counts and resistance gene prevalence trends.
+ 
+# Design
+Use readable labels and an accessible, colour-blind-friendly palette.
+Keep colours consistent across visualisations.
+Include chart titles, axis labels, legends and informative tooltips.
+Clearly state whether each chart shows counts or percentages.
+Make the dashboard usable on desktop and mobile screens.
+  
+## Development
+Keep data loading, validation, analysis and visualisation code separate.
+Document the input schema and provide a small example dataset.
+Verify unique-isolate counting, prevalence denominators and filters.
+Never place AWS credentials or other secrets in source code.
+
+
+```
